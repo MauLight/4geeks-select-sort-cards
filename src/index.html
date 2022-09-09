@@ -3,27 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    <title>Poker Game!</title>
+    <script
+      src="https://kit.fontawesome.com/ad2c299fee.js"
       crossorigin="anonymous"
-    />
+    ></script>
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div class="bg-image"></div>
+    <div class="container-fluid text-center" style="margin-top: 8%;">
+      <div class="row ">
+
+        <div class="col-2 d-flex" id="insertCard">
+
+        </div>  
       </div>
-    </div>
+      <div class="row justify-content-center" style="margin-top: 6%;">
+        <div class="col-12 w-50">
+          <form>
+            <div class="form-group d-flex justify-content-center">
+              <input
+                name="cardnum"
+                type="number"
+                class="form-control w-50 ml-2"
+                id="cardnum"
+                placeholder="How many cards do you want?"
+                min="1"
+                max="5"
+                value=""
+              />
+              <button type="button" id="draw" class="btn btn-warning">
+                Draw
+              </button>
+              <button type="button" id="sort" class="btn btn-danger mx-2">Sort</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
   </body>
 </html>
