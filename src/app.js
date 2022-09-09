@@ -44,17 +44,19 @@ btEl.addEventListener("click", e => {
   }
 });
 
-const bubbleSort = (arr = []) => {
-  let size = arr.length; // 10
+const selectionSort = (arr = []) => {
+  let size = arr.length;
   for (let i = 0; i < size; i++) {
-    for (let j = 0; j < size - 1; j++) {
-      if (arr[j] > arr[j + 1]) {
-        let temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
+    let min = i;
+    for (let j = min; j < size; j++) {
+      if (arr[min] > arr[j]) {
+        let temp = arr[min];
+        arr[min] = arr[j];
+        arr[j] = temp;
       }
     }
   }
+
   return arr;
 };
 
@@ -65,7 +67,7 @@ sortEl.addEventListener("click", () => {
   for (let i = 0; i < bodyArr.length; i++) {
     numArr.push(parseInt(bodyArr[i].innerHTML));
   }
-  let result = bubbleSort(numArr);
+  let result = selectionSort(numArr);
   const suitArr = [];
   let symArr = document.querySelectorAll("#sym");
   for (let i = 0; i < symArr.length; i++) {
